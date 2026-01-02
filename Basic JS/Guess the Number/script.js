@@ -1,8 +1,6 @@
-const guessBtn = document.getElementById("btn-guess");
-const Num = document.getElementById("num");
 const Result = document.getElementById("result");
 
-let value = 0;
+let value;
 
 let randNum = randNumGen();
 
@@ -11,8 +9,12 @@ function randNumGen (){
   return randNum;
 }
 
-guessBtn.onclick = function (){
-  value = Number(Num.value)
+document.querySelectorAll(".btn").forEach(btn => {
+  btn.onclick = () => guessNumber(Number(btn.textContent));
+});
+
+
+function guessNumber (value){
   console.log(randNum);
   if (value == randNum){
     Result.innerHTML = "Congratulations you guessed the Number!";
