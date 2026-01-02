@@ -1,9 +1,11 @@
 body {
   height: 100vh;
   width: 100vw;
+  background-color: antiquewhite;
 }
 
 .ext-div{
+  background-color: rgb(7, 183, 142);
   border: 1px solid black;
   border-radius: 15px;
   height: 30%;
