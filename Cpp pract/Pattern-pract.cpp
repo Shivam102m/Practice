@@ -2,6 +2,20 @@
 
 using namespace std;
 
+void Pattern_22(){
+  int n=5;
+  for(int i=0; i<2*n-1; i++){
+    for(int j=0; j<2*n-1; j++){
+      int top=i;
+      int down=2*n-2-i;
+      int right=2*n-2-j;
+      int left=j;
+      cout<<(n-min(min(top,down), min(right, left)))<<" ";
+    }
+    cout<<endl;
+  }
+}
+
 void Pattern_21(){
     int n=5;
     for(int i=0; i<n; i++){
@@ -313,6 +327,6 @@ void Pattern_1(){
   }
 }
 int main(){
-  Pattern_21();
+  Pattern_22();
   return 0;
 }
